@@ -1,0 +1,28 @@
+/* 
+    home-css-start
+*/
+
+.ag-home-1 {
+    background-color: #F5F5F5;
+}
+
+
+.xr-home-2 {
+    background-color: #000;
+
+    @media #{$over,$xxxl,$xxl} {
+        &::-webkit-scrollbar-thumb {
+            background: var(--xr-clr-pr-2);
+        }
+    }
+
+    .wa-cursor {
+        &::before {
+            background: var(--xr-clr-pr-2);
+        }
+    }
+}
+
+/* 
+    home-css-end
+*/

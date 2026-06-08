@@ -1,0 +1,15 @@
+/* 
+    custom-container-start
+*/
+
+@media (min-width: 1400px) {
+    .container{
+        &.ag-container-1 {
+            max-width: 1320px;
+        }
+    }
+}
+
+/* 
+    custom-container-end
+*/

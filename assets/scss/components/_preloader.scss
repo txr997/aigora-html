@@ -1,0 +1,204 @@
+// ════════════════════════════════════════════
+// Preloader
+// ════════════════════════════════════════════
+
+// ── Keyframes (must be at root level) ───────
+
+@keyframes sweep {
+    0%   { transform: translateX(-38px) rotate(-4deg); }
+    50%  { transform: translateX( 38px) rotate( 4deg); }
+    100% { transform: translateX(-38px) rotate(-4deg); }
+}
+
+@keyframes bristleBounce {
+    0%, 100% { transform: scaleY(1);    transform-origin: top; }
+    50%       { transform: scaleY(0.82); transform-origin: top; }
+}
+
+@keyframes shinePass {
+    0%       { left: -60%; opacity: 0; }
+    20%, 80% { opacity: 1; }
+    100%     { left: 160%; opacity: 0; }
+}
+
+@keyframes trailFade {
+    0%, 100% { opacity: 0.22; transform: scaleX(0.35); }
+    50%      { opacity: 0.09; transform: scaleX(1); }
+}
+
+@keyframes shadowSwing {
+    0%   { transform: translateX(-34px) scaleX(0.7); opacity: 0.18; }
+    50%  { transform: translateX(  0px) scaleX(1.1); opacity: 0.09; }
+    100% { transform: translateX( 34px) scaleX(0.7); opacity: 0.18; }
+}
+
+@keyframes ripplePop {
+    0%   { transform: scale(0.7); opacity: 0.35; }
+    100% { transform: scale(2.2); opacity: 0; }
+}
+
+// ── Component ────────────────────────────────
+
+.cx-preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 2.8rem;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+
+
+    --_green:      var(--cx-clr-pr-1);
+    --_green-pale: color-mix(in srgb, var(--cx-clr-pr-1) 8%, transparent);
+    --_green-22:   color-mix(in srgb, var(--cx-clr-pr-1) 22%, transparent);
+    --_green-25:   color-mix(in srgb, var(--cx-clr-pr-1) 25%, transparent);
+
+    // ── Scene ─────────────────────────────────
+
+    .scene {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    // ── Floor ripple ──────────────────────────
+
+    .floor-ripple {
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1.5px solid var(--_green);
+        opacity: 0;
+        animation: ripplePop 1.6s ease-out infinite;
+
+        &:nth-child(2) { animation-delay: 0.55s; }
+        &:nth-child(3) { animation-delay: 1.10s; }
+    }
+
+    // ── Shadow ────────────────────────────────
+
+    .shadow {
+        width: 96px;
+        height: 9px;
+        background: radial-gradient(ellipse at center, var(--_green-22) 0%, transparent 70%);
+        border-radius: 50%;
+        animation: shadowSwing 1.6s ease-in-out infinite;
+        margin-top: 6px;
+    }
+
+    // ── Brush ─────────────────────────────────
+
+    .brush {
+        animation: sweep 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: -90px;
+    }
+
+    .handle {
+        width: 22px;
+        height: 72px;
+        border: 2.5px solid var(--_green);
+        border-radius: 11px 11px 5px 5px;
+        background: var(--_green-pale);
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 5px;
+            width: 5px;
+            height: 28px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.45);
+        }
+    }
+
+    .connector {
+        width: 34px;
+        height: 13px;
+        border: 2.5px solid var(--_green);
+        border-radius: 4px;
+        background: var(--_green-pale);
+        margin-top: -1px;
+    }
+
+    .head {
+        width: 104px;
+        height: 22px;
+        border: 2.5px solid var(--_green);
+        border-radius: 5px 5px 3px 3px;
+        background: var(--_green-pale);
+        position: relative;
+        overflow: hidden;
+        margin-top: -1px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: -60%;
+            width: 40%;
+            height: 50%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+            animation: shinePass 1.6s ease-in-out infinite;
+        }
+    }
+
+    // ── Bristles ──────────────────────────────
+
+    $heights: 28px, 33px, 30px, 35px, 29px, 34px, 31px, 35px, 28px, 33px, 30px, 34px, 29px;
+
+    .bristles {
+        width: 104px;
+        height: 36px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        animation: bristleBounce 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+        
+    }
+
+    .bristle {
+        width: 2.5px;
+        background: var(--_green);
+        border-radius: 0 0 2px 2px;
+        flex-shrink: 0;
+        opacity: 0.85;
+
+        & + & { margin-left: 5px; }
+
+        @for $i from 1 through length($heights) {
+            &:nth-child(#{$i}) { height: nth($heights, $i); }
+        }
+    }
+
+    // ── Trail ─────────────────────────────────
+
+    .trail {
+        width: 120px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--_green-25), transparent);
+        border-radius: 2px;
+        margin-top: -2px;
+        animation: trailFade 1.6s ease-in-out infinite;
+    }
+}
+
+.cx-preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }

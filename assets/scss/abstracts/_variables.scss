@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  scroll-behavior: inherit;
+
+  --ag-font-1: "Sora", sans-serif;
+  --ag-font-2: "Tomorrow", sans-serif;
+
+  --ag-clr-pr-1: #E94625;
+
+
+  --ag-clr-h-1: #242426;
+  
+  --ag-clr-p-1: #676767;
+
+  --cx-clr-gd-1: linear-gradient(102.81deg, #00A650 30.19%, #FFC825 98.1%);
+
+  --ag-cube-1: cubic-bezier(.18,.82,.41,1);
+
+  
+}
+
+$over: "(min-width: 1800px)";
+$xxxl: "only screen and (min-width: 1600px) and (max-width: 1799px)";
+$xxl: "only screen and (min-width: 1400px) and (max-width: 1599px)";
+$xl: "only screen and (min-width: 1200px) and (max-width: 1399px)";
+$lg: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$md: "only screen and (min-width: 768px) and (max-width: 991px)";
+$sm: "only screen and (min-width: 576px) and (max-width: 767px)";
+$xs: "(max-width: 767px)";

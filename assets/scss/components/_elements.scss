@@ -1,0 +1,56 @@
+/* 
+    elements-start
+*/
+.hover-border {
+	a {
+		width: 100%;
+		display: inline !important;
+		background-position-y: -2px;
+		background-repeat: no-repeat;
+		background-size: 0 100%;
+		backface-visibility: hidden;
+		padding-bottom: 1px;
+		-webkit-backface-visibility: hidden;
+		background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+		-webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+		transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+		&:hover {
+			color: inherit;
+			background-size: 100% 100%;
+		}
+	}
+}
+
+
+.wa_title_ani_1 {
+	overflow: hidden;
+	padding-bottom: 5px;
+    margin-bottom: -5px;
+}
+
+
+.vy-cover-trigger {
+	position: relative;
+}
+
+.vy-cover-ani {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    align-items: end;
+}
+  
+.vy-cover-slice {
+	height: 100%;
+	flex-grow: 1;
+    background: rgb(0 166 80 / 50%);
+    mix-blend-mode: luminosity;
+}
+
+/* 
+    elements-end
+*/
