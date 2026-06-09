@@ -1,0 +1,142 @@
+/* 
+    about-1-start
+*/
+
+
+
+
+.ag-about-1 {
+    &-sec-title {
+        display: flex;
+        align-items: start;
+        gap: 0 30px;
+        flex-wrap: wrap;
+
+        .right-content {
+            max-width: 856px;
+            width: 100%;
+            margin-left: auto;
+
+            &-inner {
+                max-width: 636px;
+                margin-left: auto;
+                margin-top: 32px;
+            }
+        }
+
+        .sec-disc {
+            margin-bottom: 32px;
+        }
+
+
+        
+    }
+
+    &-wrap {
+        display: grid;
+        gap: 100px;
+        grid-template-columns: 1fr 1.13fr;
+
+        @media #{$xl,$lg} {
+            gap: 50px;
+            grid-template-columns: 1fr 1.5fr;
+        }
+
+        @media #{$md,$xs} {
+            gap: 50px;
+            grid-template-columns: 1fr ;
+        }
+
+        &-right {
+            display: grid;
+            gap: 8px;
+            grid-template-columns: 1fr 1fr;
+
+            @media #{$lg} {
+                grid-template-columns: 1fr;
+            }
+
+            @media #{$xs} {
+                grid-template-columns: 1fr;
+            }
+
+            @media #{$sm} {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+    
+    &-img {
+        height: 440px;
+        border-radius: 32px;
+    }
+
+    
+    &-card {
+        display: flex;
+        flex-direction: column;
+
+        .card-top {
+            background-color: var(--ag-clr-pr-1);
+            border-radius: 24px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 22px 32px;
+            justify-content: space-between;
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 32px 20px;
+            }
+        }
+
+        .number {
+            font-size: 48px;
+            color: #fff;
+        }
+
+        .count {
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .card-bottom {
+            background-color: #fff;
+            border-radius: 32px;
+            min-height: 338px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 32px;
+            position: relative;
+            z-index: 1;
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 32px 20px;
+            }
+        }
+
+        .title {
+            font-size: 18px;
+            line-height: 140%;
+        }
+
+        &:is(.has-black) {
+            .card-top, .card-bottom {
+                background-color: var(--ag-clr-h-1);
+            }
+            .title, .disc, .number, .count {
+                color: #fff;
+            }
+        }
+    }
+    
+    
+}
+
+
+/* 
+    about-1-end
+*/

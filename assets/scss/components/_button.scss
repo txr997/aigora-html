@@ -74,6 +74,31 @@
     }
 }
 
+.ag-sd-btn-1 {
+    font-size: 17px;
+    display: inline-flex;
+    gap: 8px;
+
+    span {
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            background-color: var(--ag-clr-h-1);
+            height: 1px;
+        }
+    }
+
+    i {
+        font-size: 20px;
+    }
+}
+
 
 /* 
     button-end

@@ -21,79 +21,65 @@
     margin-bottom: 0;
 }
 
-.cx-subtitle-1 {
-    font-family: var(--cx-font-2);
+.ag-subtitle-1 {
+    font-family: var(--ag-font-1);
+    background-color: var(--ag-clr-h-1);
+    display: inline-flex;
+    color: #fff;
     font-size: 15px;
-    line-height: 1.4;
-    color: var(--cx-clr-pr-1);
-    font-weight: 400;
-    border: 1px solid rgb(0 166 80 / 32%);
-    display: inline-block;
-    border-radius: 4px;
-    padding: 2px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 11px 12px;
+    padding-left: 25px;
+    margin-bottom: 12px;
     position: relative;
     z-index: 1;
-    margin-bottom: 20px;
 
     &::after {
         content: "";
+        position: absolute;
         width: 4px;
         height: 4px;
-        border-radius: 50%;
-        background-color: var(--cx-clr-pr-1);
-        position: absolute;
-        top: 11px;
-        left: 8px;
-    }
-
-    &::before {
-        content: "";
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background-color: var(--cx-clr-pr-1);
-        position: absolute;
-        top: 11px;
-        right: 8px;
+        background-color: #fff;
+        top: 18px;
+        left: 12px;
     }
 }
 
+.ag-sec-title-1 {
+    font-family: var(--ag-font-1);
+    font-weight: 600;
+    line-height: 120%;
+    font-size: 48px;
+    letter-spacing: -0.03em;
+    margin-bottom: 0;
 
-
-.cx-sec-title-1 {
-    font-family: var(--cx-font-2);
-    color: #fff;
-    font-weight: 700;
-    line-height: 1.0769;
-    font-size: 52px;
-    margin-bottom: 0px;
-
-
-    @media #{$xl} {
-        font-size: 48px;
+    span {
+        opacity: 60%;
+        display: inline;
     }
-
-    @media #{$lg} {
+    
+    @media #{$xl} {
         font-size: 42px;
     }
-
-    @media #{$md} {
+    
+    @media #{$lg} {
         font-size: 38px;
     }
 
-    @media #{$xs} {
-        font-size: 30px;
-    }
-
-    @media #{$sm} {
+    @media #{$md} {
         font-size: 34px;
     }
 
+    @media #{$xs} {
+        font-size: 28px;
+    }
 
-    &:is(.has-black) {
-        color: var(--cx-clr-h-1);
+    @media #{$sm} {
+        font-size: 32px;
     }
 }
+
 
 /* 
     typography-end
