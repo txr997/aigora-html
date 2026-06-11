@@ -57,9 +57,21 @@
                 position: relative;
                 z-index: 1;
 
-                @media #{$xl,$lg,$md,$xs} {
+                @media #{$xl,$lg,$md} {
                     font-size: 22px;
                     padding: 24px 20px;
+                }
+
+                @media #{$xs} {
+                    font-size: 22px;
+                    padding: 24px 20px;
+                    flex-wrap: wrap;
+                }
+
+                @media #{$sm} {
+                    font-size: 22px;
+                    padding: 24px 20px;
+                    flex-wrap: nowrap;
                 }
 
                 &::after {

@@ -1,6 +1,8 @@
 /* 
     hero-1-start
 */
+
+
 .ag-hero-1 {
     &-area {
         padding-top: 150px;
@@ -281,12 +283,26 @@
                     &:nth-child(2) {
                         background-color: #fff;
                         color: #000;
+
+                        &::before {
+                            background-color: var(--ag-clr-pr-1);
+                        }
+
                         .icon {
                             background-color: #000;
                             color: #fff;
                         }
-                    }
 
+                        &:hover {
+                            color: #fff;
+                            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+
+                            .icon {
+                                background-color: #fff;
+                                color: var(--ag-clr-pr-1);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -398,13 +414,29 @@
             filter: blur(210px);
             top: -40%;
             left: -8%;
+            pointer-events: none;
+            will-change: transform, opacity, filter;
+            animation: ag-hero-1-glow 8.5s ease-in-out infinite;
         }
     }
     
     
 }
 
+@keyframes ag-hero-1-glow {
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1) translate(0, 0);
+        filter: blur(210px);
+    }
 
+    50% {
+        opacity: 0.95;
+        transform: scale(1.2) translate(3%, 2%);
+        filter: blur(250px);
+    }
+}
 /* 
     hero-1-end
 */

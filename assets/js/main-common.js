@@ -12,10 +12,11 @@
 // 	lenis-smooth-scroll-activation
 const lenis = new Lenis({
 	duration: .8,
-	easing: (t) => 1 - Math.pow(1 - t, 4),
+    easing: (t) => 1 - Math.pow(1 - t, 3),
 	direction: 'vertical', 
-	smooth: true, 
-	smoothTouch: false, 
+	wheelMultiplier: 0.85,
+	smoothWheel: true,
+	smoothTouch: false,
 });
 function raf(time) {
 	lenis.raf(time);
@@ -28,15 +29,15 @@ $('a[href^="#"]').on('click', function (e) {
 	const target = $(this.getAttribute('href')); 
 
 	if (target.length) {
-		lenis.scrollTo(target[0], {
-			duration: 1.2, 
-			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-		});
+        lenis.scrollTo(target[0], {
+            duration: 1.15,
+            easing: (t) => 1 - Math.pow(1 - t, 3),
+        });
 	}
 });
 
 
-CustomEase.create("ease1", ".18,.82,.41,1");
+CustomEase.create("ease1", "0.16,1,0.3,1");
 gsap.registerPlugin(
 	ScrollTrigger,
 	MotionPathPlugin,
@@ -47,6 +48,7 @@ gsap.config({
 	nullTargetWarn: false,
 });
 PIXI.utils.skipHello(); 
+lenis.on('scroll', ScrollTrigger.update);
 
 // sticky-header-function
 function waStickyHeader() {

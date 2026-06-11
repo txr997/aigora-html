@@ -34,9 +34,22 @@
             background-color: var(--ag-clr-h-1);
             color: #fff;
 
+            &::before {
+                background-color: var(--ag-clr-pr-1);
+            }
+
             .icon {
                 background-color: var(--ag-clr-pr-1);
                 color: #fff;
+            }
+
+            &:hover {
+                box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+
+                .icon {
+                    background-color: #fff;
+                    color: var(--ag-clr-h-1);
+                }
             }
             @media #{$xs} {
                 display: none;
@@ -148,7 +161,7 @@
                     display: block;
                     margin: 0;
                     transition: .4s var(--ag-cube-1);
-
+                    border-radius: 10px;
                     a {
                         width: 100%;
                         display: block;

@@ -42,8 +42,16 @@
             color: #fff;
             margin-bottom: 20px;
 
-            @media #{$xl,$lg,$md,$xs} {
-                
+            @media #{$md} {
+                font-size: 80px;
+            }
+
+            @media #{$xs} {
+                font-size: 60px;
+            }
+
+            @media #{$sm} {
+                font-size: 70px;
             }
     
             &::after {
@@ -56,6 +64,18 @@
                 opacity: 1;
                 display: block;
                 line-height: 1;
+
+                @media #{$md} {
+                    font-size: 40px;
+                }
+    
+                @media #{$xs} {
+                    font-size: 30px;
+                }
+    
+                @media #{$sm} {
+                    font-size: 36px;
+                }
             }
         
         }    
@@ -74,6 +94,10 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
+
+        @media #{$xs} {
+            padding: 48px 20px;
+        }
 
         &::before {
             content: "";
@@ -118,6 +142,18 @@
             .ag-sec-title-1 {
                 font-size: 36px;
                 margin-bottom: 36px;
+
+                @media #{$md} {
+                    font-size: 34px;
+                }
+            
+                @media #{$xs} {
+                    font-size: 28px;
+                }
+            
+                @media #{$sm} {
+                    font-size: 32px;
+                }
             }
         }
     }
@@ -199,6 +235,14 @@
         display: grid;
         gap: 18px 12px;
         grid-template-columns: 1fr 1fr;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr; 
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr; 
+        }
 
 
         .input-box {

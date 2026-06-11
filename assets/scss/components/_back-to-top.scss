@@ -9,7 +9,7 @@
     z-index: 4;
     width: 40px;
     height: 50px;
-    background-color: var(--cx-clr-pr-1);
+    background-color: var(--ag-clr-pr-1);
     transition: 0.3s;
     display: flex;
     align-items: center;
@@ -39,31 +39,13 @@
             transform: translateY(-20px);
             mix-blend-mode: difference;
             * {
-                fill: var(--xr-clr-pr-1);
+                fill: var(--ag-clr-pr-1);
             }
         }
     }
       
     &:is(.active) {
         bottom: 2.5%;
-    }
-
-
-    &:is(.has-home-2) {
-        background: var(--xr-clr-pr-2);
-
-        svg {
-            * {
-                fill: #000;
-            }
-        }
-        &:hover {
-            svg {
-                * {
-                    fill: var(--xr-clr-pr-2);
-                }
-            }
-        }
     }
 
 

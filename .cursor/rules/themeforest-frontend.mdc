@@ -1,0 +1,21 @@
+Always follow existing project structure.
+
+Use SCSS architecture already present in the project.
+
+Follow existing class naming conventions.
+
+Generate ThemeForest-quality code.
+
+Use semantic HTML5.
+
+Do not use inline CSS.
+
+Do not use inline JavaScript.
+
+Check existing sections before generating new code.
+
+Reuse existing utility classes when possible.
+
+Generate responsive code.
+
+Output only requested files.

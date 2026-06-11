@@ -17,8 +17,8 @@
 window.addEventListener('load', function(){
 
 
-	if (document.querySelectorAll(".cx-preloader").length) {
-		const loader = document.querySelector(".cx-preloader");
+	if (document.querySelectorAll(".ag-preloader-1").length) {
+		const loader = document.querySelector(".ag-preloader-1");
 		
 		setTimeout(() => {
 			loader.classList.add("loaded");
@@ -81,88 +81,51 @@ function afterPreloader() {
 		
 
 
-		if($('.wa_subtitle_ani_1').length) {
-			var wa_subtitle_ani_1 = $(".wa_subtitle_ani_1");
-	
-			if(wa_subtitle_ani_1.length == 0) ; gsap.registerPlugin(SplitText); wa_subtitle_ani_1.each(function(index, el) {
-			
-				el.split = new SplitText(el, { 
-					type: "lines,words,chars",
-					linesClass: "split-line"
-				});
-			
-				if( $(el).hasClass('wa_subtitle_ani_1') ){
-					gsap.set(el.split.chars, {
-						opacity: 0,
-					});
-				}
-			
-				el.anim = gsap.to(el.split.chars, {
-					scrollTrigger: {
-						trigger: el,
-						start: "top 80%",
-						end: "top 60%",
-						markers: false,
-						// scrub: 2,
-					},
-			
-					xPercent: 0,
-					yPercent: 0,
-					color: "inherit",
-					opacity: 1,
-					duration: .1,
-					stagger: 0.1,
-				});
-			
-			});
-		}
-
-
-		if($('.wa_title_ani_1').length) {
+        /* 
+			section-title-1
+		*/	
+		if ($(".wa_title_ani_1").length) {
 			var wa_title_ani_1 = $(".wa_title_ani_1");
-		
-			if(wa_title_ani_1.length == 0) ; 
-			gsap.registerPlugin(SplitText); 
-			wa_title_ani_1.each(function(index, el) {
-			
-				el.split = new SplitText(el, { 
-					type: "lines",
-					linesClass: "split-line"
+			if (wa_title_ani_1.length == 0) return;
+
+			gsap.registerPlugin(SplitText);
+
+			wa_title_ani_1.each(function (index, el) {
+				el.split = new SplitText(el, {
+					type: "lines,words",
+					linesClass: "split-line",
 				});
-			
-				if( $(el).hasClass('wa_title_ani_1') ){
-					gsap.set(el.split.lines, {
-						color: "var(--cx-clr-pr-1)",
-						yPercent: -100,
+
+				let delayValue = $(el).attr("data-split-delay") || "0s";
+				delayValue = parseFloat(delayValue) || 0; 
+
+				if ($(el).hasClass("wa_title_ani_1")) {
+					gsap.set(el.split.words, {
+						x: 30,
+                        filter: "blur(5px)",
+                        opacity: 0,
 					});
 				}
 
-				// Get optional data-ani-delay attribute from the HTML element
-				var aniDelay = $(el).data('ani-delay');
-				if(typeof aniDelay === "undefined" || isNaN(parseFloat(aniDelay))) {
-					aniDelay = 0;
-				} else {
-					aniDelay = parseFloat(aniDelay);
-				}
-			
-				el.anim = gsap.to(el.split.lines, {
+				el.anim = gsap.to(el.split.words, {
 					scrollTrigger: {
 						trigger: el,
 						start: "top 86%",
-						end: "top 70%",
-						markers: false,
+						toggleActions: 'play none none reverse',
 					},
-					xPercent: 0,
-					yPercent: 0,
-					color: "inherit",
+					x: 0,
+                    filter: "blur(0px)",
 					opacity: 1,
-					duration: .5,
-					stagger: 0.1,
-					delay: aniDelay
+					duration: 1,
+
+					ease: "ease1",
+					stagger: 0.08,
+					delay: delayValue, 
 				});
-			
 			});
 		}
+
+
 	}	
 
 
