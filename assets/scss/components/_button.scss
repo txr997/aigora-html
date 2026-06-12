@@ -145,10 +145,12 @@
     font-size: 17px;
     display: inline-flex;
     gap: 8px;
+    transition: .4s var(--ag-cube-1);
 
     span {
         position: relative;
         z-index: 1;
+            transition: .4s var(--ag-cube-1);
 
         &::after {
             content: "";
@@ -158,11 +160,26 @@
             width: 100%;
             background-color: var(--ag-clr-h-1);
             height: 1px;
+            transition: .4s var(--ag-cube-1);
         }
     }
 
     i {
         font-size: 20px;
+        transition: .4s var(--ag-cube-1);
+    }
+
+    &:hover {
+        color: var(--ag-clr-pr-1);
+
+        span {
+            &::after {
+                width: 0%;
+            }
+        }
+        i {
+            transform: rotate(45deg);
+        }
     }
 }
 

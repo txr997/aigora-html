@@ -116,7 +116,7 @@ function afterPreloader() {
 					x: 0,
                     filter: "blur(0px)",
 					opacity: 1,
-					duration: 1,
+					duration: 1.5,
 
 					ease: "ease1",
 					stagger: 0.08,
@@ -127,6 +127,15 @@ function afterPreloader() {
 
 
 	}	
+
+	// hero-1-animation
+	var hero1tl = gsap.timeline();
+
+	hero1tl.from(".ag-hero-1-img img", {
+		scale: .4,
+		yPercent: 60,
+		duration: 1,
+	});
 
 
 	// hero-3-slider-function
@@ -473,7 +482,7 @@ function afterPageLoad() {
 		var wow = new WOW({
 			boxClass:     'wow',
 			animateClass: 'animated',
-			offset:       50,
+			offset:       100,
 			mobile:       true,
 			live:         true
 		});
@@ -501,6 +510,119 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
+
+// about-1-card-animation
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	const about1tl = gsap.timeline({
+		scrollTrigger: {
+		  trigger: ".ag-about-1-card", 
+		  start: "top 50%", 
+		  toggleActions: "play none none reverse", 
+		  markers: false 
+		}
+	  });
+	
+	  about1tl.from(".ag-about-1-card .has-ani:nth-of-type(1)", { 
+		yPercent: 100,
+		duration: .5
+	  })
+	
+	  about1tl.from(".ag-about-1-card .has-ani:nth-of-type(2)", { 
+		yPercent: -100,
+		duration: .5
+	  },"<")
+}
+
+// services-tabs-animation
+document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
+    tab.addEventListener('shown.bs.tab', function (e) {
+        const target = document.querySelector(
+            e.target.getAttribute('data-bs-target')
+        );
+
+        target.classList.remove('animate__slideInUp');
+
+        void target.offsetWidth;
+
+        target.classList.add(
+            'animate__animated',
+            'animate__slideInUp'
+        );
+    });
+});
+
+
+// projects-1-animation
+if ($(".wa_magnetic_1_trigger").length) {
+    var waMagnets2v2 = document.querySelectorAll('.wa_magnetic_1_trigger');
+    var waStrength2v2 = 30;
+
+    waMagnets2v2.forEach((magnet) => {
+        magnet.addEventListener('mousemove', moveMagnet2);
+        magnet.addEventListener('mouseout', function(event) {
+            const innerElements = event.currentTarget.querySelectorAll('.wa_magnetic_1_elm');
+            innerElements.forEach((elm) => {
+                gsap.to(elm, {
+                    x: 0,
+                    y: 0,
+                    duration: 1,
+                    ease: "ease1"
+                });
+            });
+        });
+    });
+
+    function moveMagnet2(event) {
+        var magnetButton = event.currentTarget;
+        var bounding = magnetButton.getBoundingClientRect();
+        const innerElements = magnetButton.querySelectorAll('.wa_magnetic_1_elm');
+
+        const xMove = (((event.clientX - bounding.left) / magnetButton.offsetWidth) - 0.5) * waStrength2v2;
+        const yMove = (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * waStrength2v2;
+
+        innerElements.forEach((elm) => {
+            gsap.to(elm, {
+                x: xMove,
+                y: yMove,
+                duration: 1,
+                ease: "ease1"
+            });
+        });
+    }
+}
+
+
+// step-1-card-animation
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	const about1tl = gsap.timeline({
+		scrollTrigger: {
+		  trigger: ".ag-step-1-card", 
+		  start: "top 50%", 
+		  toggleActions: "play none none reverse", 
+		  markers: false 
+		}
+	  });
+	
+	  about1tl.from(".ag-step-1-card .has-ani:nth-of-type(1)", { 
+		yPercent: 100,
+		duration: .5
+	  })
+	
+	  about1tl.from(".ag-step-1-card .has-ani:nth-of-type(2)", { 
+		yPercent: -100,
+		duration: .5
+	  },"<")
+	
+	  about1tl.from(".ag-step-1-card .has-ani:nth-of-type(3)", { 
+		yPercent: 100,
+		duration: .5
+	  },"<")
+	
+	  about1tl.from(".ag-step-1-card .has-ani:nth-of-type(4)", { 
+		yPercent: -100,
+		duration: .5
+	  },"<")
+}
 
 // features-1-animation
 if (window.matchMedia("(min-width: 1200px)").matches) {

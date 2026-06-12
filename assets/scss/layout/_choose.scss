@@ -145,6 +145,12 @@
                 &::before {
                     opacity: 1;
                 }
+
+                .icon-elm {
+                    img {
+                        animation: jello 1s;
+                    }
+                }
             }
 
         }
@@ -170,6 +176,7 @@
                 height: 50px;
                 border-radius: 50%;
                 border: 2px solid #fff;
+                animation: h1authorKf 4s linear infinite;
 
                 &:not(:first-child) {
                     margin-left: -20px;
