@@ -243,6 +243,10 @@
             max-width: 251px;
         }
 
+        .widget-disc {
+            margin-bottom: 36px;
+        }
+
         &-form {
             display: flex;
             flex-direction: column;
@@ -270,6 +274,7 @@
                 border-color: var(--ag-clr-pr-1);
             }
         }
+
 
         &-btn {
             display: inline-flex;

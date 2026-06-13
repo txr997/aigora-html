@@ -123,14 +123,6 @@
             line-height: 140%;
         }
 
-        &:is(.has-black) {
-            .card-top, .card-bottom {
-                background-color: var(--ag-clr-h-1);
-            }
-            .title, .disc, .number, .count {
-                color: #fff;
-            }
-        }
     }
     
     
