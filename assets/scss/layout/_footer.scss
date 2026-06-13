@@ -204,11 +204,32 @@
                 color: #1F1F1F;
                 opacity: 80%;
                 transition: .4s var(--ag-cube-1);
+                padding-left: 12px;
+                position: relative;
+                transform: translateX(-12px);
+
+                &::after {
+                    content: "";
+                    width: 4px;
+                    height: 4px;
+                    position: absolute;
+                    top: 8px;
+                    left: 0;
+                    background-color: var(--ag-clr-pr-1);
+                    z-index: -1;
+                    transform: scale(0);
+                    transition: .5s var(--ag-cube-1);
+                }
 
                 &:hover,
                 &:is(.is-active) {
                     color: var(--ag-clr-pr-1);
                     opacity: 1;
+                    transform: translateX(0);
+
+                    &::after {
+                        transform: scale(1);
+                    }
                 }
             }
         }
@@ -253,22 +274,21 @@
         &-btn {
             display: inline-flex;
             align-items: center;
+            font-family: var(--ag-font-1);
+            font-size: 16px;
+            font-weight: 400;
+            background: transparent;
+            line-height: 1;
 
-            button {
-                font-family: var(--ag-font-1);
-                font-size: 16px;
-                font-weight: 400;
+            .text {
                 color: #fff;
                 background-color: var(--ag-clr-h-1);
                 border-radius: 16px;
                 padding: 16px 20px;
-                line-height: 1;
                 margin-right: -1px;
                 transition: .4s var(--ag-cube-1);
 
-                &:hover {
-                    background-color: var(--ag-clr-pr-1);
-                }
+
             }
 
             .icon {
@@ -283,15 +303,23 @@
                 font-size: 24px;
                 flex-shrink: 0;
                 transition: .4s var(--ag-cube-1);
+
+                i {
+                    transition: .4s var(--ag-cube-1);
+                }
             }
 
             &:hover {
-                button {
+                .text {
                     background-color: var(--ag-clr-pr-1);
                 }
 
                 .icon {
                     background-color: var(--ag-clr-h-1);
+
+                    i {
+                        transform: rotate(45deg);
+                    }
                 }
             }
         }
