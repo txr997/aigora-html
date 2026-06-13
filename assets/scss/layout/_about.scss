@@ -123,6 +123,11 @@
             line-height: 140%;
         }
 
+        &:nth-child(2) {
+            .card-top {
+                background: linear-gradient(0deg, #323232 0%, #010101 100%);
+            }
+        }
     }
     
     

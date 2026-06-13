@@ -208,6 +208,108 @@
     header-1-end
 */
 
+/* 
+    header-2-start
+*/
+.ag-header-2 {
+    &-area {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+    }
+    &-container {
+        max-width: 1826px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    &-logo {
+        margin-top: 16px;
+    }
+
+    &-action {
+        &-btn {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 16px;
+
+            .ag-pr-btn-2 {
+                @media #{$xs} {
+                    display: none;
+                }
+                @media #{$sm} {
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+
+
+    &-menu {
+        position: relative;
+        z-index: 1;
+        padding: 0 60px;
+
+        .bg-shape {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    
+}
+
+
+
+.ag-main-navigation  {
+    &:is(.has-header-2) {
+        .navbar-nav {
+            li {
+                &:is(.dropdown)  {
+                    > a {
+                        &::before {
+                            content: "\f13a";
+                            color: var(--ag-clr-h-1);
+                        }
+                    }
+                }
+
+                &:hover {
+                    > a {
+                        color: var(--ag-clr-h-1);
+                    }
+                }
+
+                .dropdown-menu {
+                    li {
+                        &:hover {
+                            background-color: var(--ag-clr-h-1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+/* 
+    header-2-end
+*/
+
 
 /* 
     sticky-header-css-start

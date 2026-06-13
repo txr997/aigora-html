@@ -48,6 +48,14 @@
 }
 
 
+.ag-offcanvas-btn-2 {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
 .ag-pr-btn-1 {
     font-family: var(--ag-font-1);
     font-size: 16px;
@@ -183,6 +191,32 @@
     }
 }
 
+
+
+.ag-pr-btn-2 {
+    font-family: var(--ag-font-1);
+    font-size: 16px;
+    display: inline-flex;
+    gap: 12px;
+    padding: 4px;
+    padding-right: 20px;
+    background-color: #fff;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 100px;
+
+    .icon {
+        width: 44px;
+        height: 44px;
+        background-color: var(--ag-clr-h-1);
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 22px;
+    }
+}
 
 /* 
     button-end

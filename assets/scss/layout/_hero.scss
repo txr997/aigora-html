@@ -498,6 +498,226 @@
         transform: rotateY(0deg);
     }
 }
+
+
 /* 
     hero-1-end
+*/
+
+/* 
+    hero-2-start
+*/
+.ag-hero-2 {
+    &-area {
+        margin: 12px;
+        padding-top: 280px;
+        padding-bottom: 280px;
+
+        @media #{$lg,$md,$xs} {
+            padding-bottom: 30px;
+            padding-top: 180px;
+        }
+    }
+
+    &-bg-img {
+        mask-size: 100% 100%;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+            mask-image: unset !important;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 50px;
+        @media #{$over} {
+            margin-left: -148px;
+        }
+    }
+
+    &-content {
+        max-width: 766px;
+        width: 100%;
+
+        .hero-subtitle {
+            font-family: var(--ag-font-1);
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            border: 1px solid #fff;
+            display: inline-flex;
+            border-radius: 100px;
+            gap: 12px;
+            padding-right: 12px;
+            color: #fff;
+            align-items: center;
+            margin-bottom: 16px;
+
+            .icon {
+                background-color: #fff;
+                border-radius: 100px;
+                color: #000;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 9px 12px;
+            }
+        }
+
+        .hero-title {
+            font-size: 66px;
+            color: #fff;
+            margin-bottom: 12px;
+
+            @media #{$xl} {
+                font-size: 60px;
+            }
+            
+            @media #{$lg} {
+                font-size: 55px;
+            }
+        
+            @media #{$md} {
+                font-size: 50px;
+            }
+        
+            @media #{$xs} {
+                font-size: 38px;
+            }
+        
+            @media #{$sm} {
+                font-size: 45px;
+            }
+        }
+
+        .hero-disc {
+            margin-bottom: 32px;
+            color: #fff;
+        }
+
+        .btn-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+
+            .ag-pr-btn-2 {
+                &:nth-child(2) {
+                    background: transparent;
+                    border: 1px solid #fff;
+                    padding: 10px 19px;
+                    color: #fff;
+                    opacity: 80%;
+                    padding: 11px 22px;
+                }
+            }
+        }
+    }
+
+    &-author {
+        max-width: 400px;
+        width: 100%;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        z-index: 1;
+        padding: 12px;
+        padding-bottom: 25px;
+
+        @media #{$lg,$md,$xs} {
+            position: relative;
+        }
+
+        .bg-shape {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .video-elm {
+            height: 245px;
+            border-radius: 50px;
+            margin-bottom: 40px;
+        }
+
+        .number-x-author {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .number {
+            font-size: 40px;
+            font-weight: 700;
+            font-family: var(--ag-font-2);
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        .author {
+            display: flex;
+
+            &-img {
+                width: 40px;
+                height: 40px;
+                border-radius: 12px;
+                border: 1px solid #fff;
+                flex: 0 0 auto;
+
+                &:not(:first-child) {
+                    margin-left: -15px;
+                }
+            }
+        }
+
+        .disc {
+            margin-left: auto;
+            text-transform: uppercase;
+            color: #fff;
+            max-width: 284px;
+            max-width: 240px;
+        }
+
+        .favicon-elm {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            @media #{$xs} {
+                display: none;
+            }
+
+            @media #{$sm} {
+                display: inline-block;
+            }
+        }
+    }
+    
+    
+}
+
+
+
+/* 
+    hero-2-end
 */
