@@ -1,0 +1,96 @@
+/* 
+    award-2-start
+*/
+.ag-award-2 {
+    &-sec-title {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        align-items: center;
+        gap: 20px;
+        padding: 32px 32px;
+        border: 1px solid #E1E1E1;
+        margin-top: -1px;
+        transition: .5s var(--ag-cube-1);
+
+        @media #{$md,$xs} {
+            flex-wrap: wrap;
+        }
+
+
+        .subtitle {
+            opacity: 80%;
+        }
+        
+        .title {
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        .img-elm {
+            position: absolute;
+            opacity: 0;
+            width: 90px;
+            height: 90px;
+            pointer-events: none;
+            background: #FFFFFF;
+            box-shadow: -3px -2px 6px #FFFFFF, 3px 6px 12px rgba(0, 0, 0, 0.16), inset 0px 0px 10px rgba(0, 0, 0, 0.32);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .dot-shape {
+            width: 8px;
+            height: 8px;
+            position: absolute;
+
+            z-index: -1;
+            background-color: #000;
+            transition: .5s var(--ag-cube-1);
+            opacity: 0;
+            
+
+            &:is(.has-1) {
+                top: 0;
+                left: 0;
+            }
+
+            &:is(.has-2) {
+                top: 0;
+                right: 0;
+            }
+
+            &:is(.has-3) {
+                bottom: 0;
+                left: 0;
+            }
+
+            &:is(.has-4) {
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+        &:hover {
+            background-color: #fff;
+
+            .dot-shape {
+                opacity: 1;
+            }
+            opacity: 1;
+        }
+    }
+}
+/* 
+    award-2-end
+*/

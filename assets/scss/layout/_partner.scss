@@ -1,0 +1,64 @@
+/* 
+    partner-2-start
+*/
+.ag-partner-2 {
+    &-area {
+    
+    }
+
+    &-sec-title {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: start;
+
+        .ag-sec-title-1 {
+            max-width: 834px;
+            width: 100%;
+
+            
+        }
+    }
+
+
+    &-wrap {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .single-logo {
+            background-color: #fff;
+            border-radius: 20px;
+            max-width: 206px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+            padding: 20px;
+            
+            &:is(.has-btn) {
+                background-color: transparent;
+
+                .ag-pr-btn-2 {
+                    border-radius: 12px;
+                    background-color: var(--ag-clr-h-1);
+                    text-transform: capitalize;
+                    color: #fff;
+
+                    .icon {
+                        background-color: #fff;
+                        border-radius: 10px;
+                        color: #000;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}
+/* 
+    partner-2-end
+*/

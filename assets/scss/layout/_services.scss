@@ -220,3 +220,133 @@
 /* 
     services-1-end
 */
+
+/* 
+    services-2-start
+*/
+.ag-services-2 {
+    &-sec-title {
+        .subtitle-x-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(203 203 203 / 50%);
+            padding-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        .ag-subtitle-1 {
+            margin-bottom: 0;
+        }
+
+        .ag-sec-title-1 {
+            max-width: 900px;
+            margin-left: auto;
+        }
+    }
+
+
+    &-acd {
+        &-item {
+            border-radius: 40px;
+            transition: .5s var(--ag-cube-1);
+            .item-title {
+                padding: 34px 40px;
+                width: 100%;
+                justify-content: space-between;
+                display: flex;
+                align-items: center;
+                background-color: transparent;
+                text-align: left;
+                flex-wrap: wrap;
+                gap: 15px;
+
+                @media #{$xl,$lg,$md,$xs} {
+                    padding: 34px 20px;
+                }
+
+
+                .title {
+                    font-size: 32px;
+                    font-weight: 400;
+
+                    @media #{$xl,$lg,$md,$xs} {
+                        font-size: 22px;
+                    }
+                }
+
+                .tags-list {
+                    display: inline-flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    max-width: 306px;
+                    width: 100%;
+                    span {
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        font-size: 14px;
+                        opacity: 80%;
+                        border: 1px solid #EAEAEA;
+                        border-radius: 100px;
+                        padding: 3px 12px;
+                    }
+                }
+
+                .ag-pr-btn-2 {
+                    background-color: transparent;
+                    font-weight: 400;
+                    .icon {
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
+
+
+                &:is(:not(.collapsed)) {
+                    .ag-pr-btn-2 {
+                        .icon {
+                            background-color: var(--ag-clr-h-1);
+                            color: #fff;
+                        }
+                    }
+    
+                }
+            }
+
+            .inner-content {
+                max-width: 683px;
+                margin-left: auto;
+                padding-bottom: 30px;
+
+                .img-elm {
+                    max-width: 414px;
+                    height: 248px;
+                    border-radius: 24px;
+                    margin-top: 25px;
+                }
+                .disc {
+                    max-width: 414px;
+                    margin-bottom: 22px;
+                }
+
+                .ag-pr-btn-2 {
+                    padding: 7px 20px;
+                    background-color: #F5F5F5;
+                }
+            }
+            
+
+            &:is(.active) {
+                background-color: #fff;
+            }
+        }
+    }
+
+}
+
+
+
+/* 
+    services-2-end
+*/

@@ -502,12 +502,15 @@ function afterPageLoad() {
 
 // header-1-menu
 document.addEventListener('DOMContentLoaded', function () {
-	const btn = document.querySelector('.ag-offcanvas-btn-1');
-	const menu = document.querySelector('.ag-header-1-menu');
-	btn.addEventListener('click', function () {
-		btn.classList.toggle('active');
-		menu.classList.toggle('active');
-	});
+	if($(".ag-header-1-menu").length) {
+		const btn = document.querySelector('.ag-offcanvas-btn-1');
+		const menu = document.querySelector('.ag-header-1-menu');
+		btn.addEventListener('click', function () {
+			btn.classList.toggle('active');
+			menu.classList.toggle('active');
+		});
+	}
+
 });
 
 
@@ -656,76 +659,87 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 	
 }
 
-
-// image-animation-1
-document.querySelectorAll(".vy-cover-trigger").forEach(trigger => {
-
-	const vyct = gsap.timeline({
-	  scrollTrigger: {
-		trigger: trigger, 
-		start: "top 85%", 
-		toggleActions: "play none none reverse", 
-		markers: false 
-	  }
-	});
-  
-	vyct.to(trigger.querySelectorAll(".vy-cover-slice"), 1, { 
-	  height: 0, 
-	  ease: "power4.InOut",
-	  stagger: { amount: 0.33 } 
-	}, 'start')
-	
-	.from(trigger.querySelector(".vy-cover-slice-img"), 1.2, { 
-	  scale: 1.3, 
-	  ease: "power4.InOut"
-	}, 'start');
-
-});
-
-// features-1-svg 
-if ($(".cx-about-1-features-bg-shape").length) {
-
-	const svg = document.querySelector(".cx-about-1-features-bg-shape");
-	const path = svg.querySelector(".svg-line");
-
-	const pathLength = path.getTotalLength();
-
-	gsap.set(path, {
-		strokeDasharray: pathLength,
-		strokeDashoffset: -pathLength, // reverse direction
-	});
-
-	gsap.to(path, {
-		strokeDashoffset: 0,
-		duration: 3,
-		ease: "power2.out",
+// projects-1-animation
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	const project1tl = gsap.timeline({
 		scrollTrigger: {
-			trigger: svg,
-			start: "top 70%",
-			// scrub: 1,
-			markers: false,
-		},
+			trigger: ".ag-projects-2-area", 
+			start: "top top", 
+			end: "bottom bottom", 
+			toggleActions: "play none none reverse", 
+			scrub: true,
+			markers: false 
+		}
 	});
+	
+	project1tl.to(".ag-projects-2-sec-title", { 
+		filter: "blur(5px)",
+		opacity: .5,
+		scale: .8
+	})
+
+}
+
+// choose-1-animation
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	const project1tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ag-choose-2-height", 
+			start: "top 50%", 
+			end: "bottom 50%", 
+			toggleActions: "play none none reverse", 
+			scrub: true,
+			markers: false 
+		}
+	});
+	
+	project1tl.from(".ag-choose-2-item:nth-of-type(1)", { 
+		xPercent: 104,
+	})
+	
+	project1tl.from(".ag-choose-2-item:nth-of-type(2)", { 
+		xPercent: 104,
+	},"<")
+	
+	project1tl.from(".ag-choose-2-item:nth-of-type(3)", { 
+		yPercent: 104,
+	},"<50%")
+	
+	project1tl.from(".ag-choose-2-item:nth-of-type(4)", { 
+		yPercent: 104,
+	},"<50%")
 
 }
 
 
 
+// award-2-cursor-follow
+if($(".ag-award-2-item").length) {
+	const featureItems = document.querySelectorAll(".ag-award-2-item");
 
-// services-1-slider
-if ($('.cx_services_1_slider').length) {
+	featureItems.forEach((featureItem) => {
+		const flair = featureItem.querySelector(".cursor_follow");
+	
+		gsap.set(flair, { scale: 0, opacity: 0, xPercent: -60, yPercent: -50, rotate: 90,  });
+	
+		featureItem.addEventListener("mouseenter", () => {
+			gsap.to(flair, { scale: 1, opacity: 1, duration: 0.4, rotate: 90, ease: "power3.out" });
+		});
 
-	const cx_services_1_slider = new Swiper('.cx_services_1_slider', {
-		loop: true,
-		speed: 500,
-		slidesPerView: "auto",
-		spaceBetween: 24,
-		autoplay: { delay: 4000 },
 
+		featureItem.addEventListener("mousemove", (e) => {
+			const rect = featureItem.getBoundingClientRect();
+			const x = e.clientX - rect.left;
+			const y = e.clientY - rect.top;
+			gsap.to(flair, { x, y, duration: 0.1 });
+		});
+	
+		featureItem.addEventListener("mouseleave", () => {
+			gsap.to(flair, { scale: 0, opacity: 0, duration: 0.4, rotate: 90, ease: "power3.in" });
+		});
 	});
-  
+	
 }
-
 
 
 })(jQuery);
