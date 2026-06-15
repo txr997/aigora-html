@@ -157,7 +157,8 @@
     &-wrap {
         display: grid;
         gap: 60px;
-        grid-template-columns: 1fr 2.3fr;
+        grid-template-columns: 1fr 1.97fr;
+
 
         @media #{$md,$xs} {
             grid-template-columns: 1fr;

@@ -47,7 +47,6 @@ gsap.registerPlugin(
 gsap.config({
 	nullTargetWarn: false,
 });
-PIXI.utils.skipHello(); 
 lenis.on('scroll', ScrollTrigger.update);
 
 // sticky-header-function

@@ -7,6 +7,11 @@
         border-radius: 60px;
         margin-left: 32px;
         margin-right: 32px;
+
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
     }
 
     &-sec-title {
@@ -115,7 +120,28 @@
     
     
 
-    
+    &-marquee {
+        &::after {
+            content: "";
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: linear-gradient(90deg, #1e1e1f 20%, transparent);
+            z-index: 1;
+            width: 30%;
+            height: 100%;
+        }
+        &::before {
+            content: "";
+            top: 0;
+            right: 0;
+            position: absolute;
+            background: linear-gradient(-90deg, #1e1e1f 20%, transparent);
+            z-index: 1;
+            width: 30%;
+            height: 100%;
+        }
+    }
 
     
     

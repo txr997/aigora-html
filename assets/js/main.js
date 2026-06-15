@@ -138,6 +138,52 @@ function afterPreloader() {
 	});
 
 
+	// hero-2-bg-animation
+	if ($(".ag-hero-2-bg-img").length) {
+		const hero2Bg = $(".ag-hero-2-bg-img");
+		const hero2Img = hero2Bg.find("img");
+		const hero2Shimmer = hero2Bg.find(".ag-hero-2-bg-shimmer");
+		const hero2tl = gsap.timeline({
+			onComplete: () => {
+				if (typeof initWaHoverWave === "function") {
+					initWaHoverWave(".ag-hero-2-bg-img.wa-hover-wave");
+				} else {
+					hero2Bg.addClass("is-animated");
+				}
+			},
+		});
+
+		gsap.set(hero2Bg, { opacity: 0, scale: 1.04 });
+		gsap.set(hero2Img, { scale: 1.18, opacity: 0, filter: "blur(14px)" });
+
+		if (hero2Shimmer.length) {
+			gsap.set(hero2Shimmer, { opacity: 1 });
+		}
+
+		hero2tl
+			.to(hero2Bg, { opacity: 1, scale: 1, duration: 1.1 })
+			.to(hero2Img, {
+				scale: 1,
+				opacity: 1,
+				filter: "blur(0px)",
+				duration: 1,
+			}, 0.15);
+
+		if (hero2Shimmer.length) {
+			hero2tl
+				.to(hero2Shimmer, {
+					x: "120%",
+					duration: 1.2,
+					ease: "power2.inOut",
+				}, 0.6)
+				.to(hero2Shimmer, {
+					opacity: 0,
+					duration: 0.4,
+				}, 1.4);
+		}
+	}
+
+
 	// hero-3-slider-function
 	if ($('.cx_h2_slider_active').length) {
 

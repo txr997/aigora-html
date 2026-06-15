@@ -1,31 +1,28 @@
 /* 
-    home-css-start
+    home-page-css-start
 */
 
 .ag-home-1 {
     background-color: #F5F5F5;
 }
+
+
+
 .ag-home-2 {
     background-color: #F5F5F5;
-}
 
 
-.xr-home-2 {
-    background-color: #000;
+    .wa-back-to-top {
+        background-color: var(--ag-clr-h-1);
 
-    @media #{$over,$xxxl,$xxl} {
-        &::-webkit-scrollbar-thumb {
-            background: var(--xr-clr-pr-2);
-        }
-    }
-
-    .wa-cursor {
-        &::before {
-            background: var(--xr-clr-pr-2);
+        &:hover svg * {
+            fill: var(--ag-clr-h-1);
         }
     }
 }
+
+
 
 /* 
-    home-css-end
+    home-page-css-end
 */

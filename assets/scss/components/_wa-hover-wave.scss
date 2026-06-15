@@ -1,0 +1,38 @@
+/* wa-hover-wave-start */
+
+.wa-hover-wave {
+    position: relative;
+    overflow: hidden;
+
+    > img {
+        display: block;
+        // transition: opacity 0.35s ease;
+    }
+
+    &.is-wave-active > img {
+        opacity: 0 !important;
+    }
+
+    .wa-hover-wave-canvas {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0;
+        // transition: opacity 0.35s ease;
+        will-change: opacity;
+
+        canvas {
+            display: block;
+            width: 100% !important;
+            height: 100% !important;
+            pointer-events: none;
+        }
+    }
+
+    &.is-wave-active .wa-hover-wave-canvas {
+        opacity: 1;
+    }
+}
+
+/* wa-hover-wave-end */
