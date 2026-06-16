@@ -12,9 +12,10 @@
     }
 
     &-wrap {
-        max-width: 636px;
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
     }
 
@@ -29,6 +30,11 @@
         position: relative;
         z-index: 2;
         box-shadow: 0px 4px 5px rgb(0 0 0 / 3%);
+
+        max-width: 636px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
 
         .ag-pr-btn-1 {
             background-color: var(--ag-clr-h-1);
@@ -65,6 +71,10 @@
         border-radius: 12px;
         transform: translateY(-61px);
         transition: .5s;
+        padding: 0 33px;
+        display: inline-block;
+        opacity: 0;
+        visibility: hidden;
 
         @media #{$md,$xs} {
             display: none;
@@ -72,6 +82,8 @@
 
         &:is(.active) {
             transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
         }
     }
 }
@@ -261,6 +273,11 @@
         position: relative;
         z-index: 1;
         padding: 0 60px;
+
+        @media #{$over} {
+            padding: 0 70px;
+            margin-right: -40px;
+        }
 
         .bg-shape {
             position: absolute;

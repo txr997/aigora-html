@@ -16,7 +16,9 @@
             max-width: 834px;
             width: 100%;
 
-            
+            span {
+                display: inline-block;
+            }
         }
     }
 
@@ -37,7 +39,16 @@
             justify-content: center;
             min-height: 120px;
             padding: 20px;
-            
+            transition: .5s var(--ag-cube-1);
+
+
+            &:hover {
+                background-color: var(--ag-clr-h-1);
+                img {
+                    animation: pulse 1s;
+                }
+            }
+
             &:is(.has-btn) {
                 background-color: transparent;
 

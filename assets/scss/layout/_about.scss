@@ -195,6 +195,10 @@
         }
         .ag-pr-btn-2 {
             background: transparent;
+
+            &:hover {
+                background-color: #000;
+            }
         }
     }
     
@@ -226,6 +230,14 @@
 
             .disc {
                 font-size: 16px;
+            }
+
+            &:hover {
+                .icon-elm {
+                    img {
+                        animation: swing 1s;
+                    }
+                }
             }
 
             &:nth-child(2) {

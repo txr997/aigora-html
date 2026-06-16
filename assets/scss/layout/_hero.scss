@@ -627,10 +627,15 @@
                 &:nth-child(2) {
                     background: transparent;
                     border: 1px solid #fff;
-                    padding: 10px 19px;
+                    padding: 17px 22px;
                     color: #fff;
                     opacity: 80%;
-                    padding: 11px 22px;
+
+                    &:hover {
+                        background-color: #000;
+                        opacity: 1;
+                        border-color: transparent;
+                    }
                 }
             }
         }
@@ -689,6 +694,7 @@
                 border-radius: 12px;
                 border: 1px solid #fff;
                 flex: 0 0 auto;
+                animation: h1authorKf 4s linear infinite;
 
                 &:not(:first-child) {
                     margin-left: -15px;

@@ -204,6 +204,7 @@
     align-items: center;
     text-transform: uppercase;
     border-radius: 100px;
+    transition: 1s var(--ag-cube-1);
 
     .icon {
         width: 44px;
@@ -215,9 +216,248 @@
         align-items: center;
         color: #fff;
         font-size: 22px;
+        transition: .5s var(--ag-cube-1);
+
+        i {
+            transition: .5s var(--ag-cube-1);
+        }
     }
+
+
+    .text {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        line-height: 1;
+
+        &::after {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            display: block;
+            transition: 1s var(--ag-cube-1);
+            position: absolute;
+            content: attr(data-back);
+            transform: translateY(100%);
+        }
+    
+        &::before {
+            top: 0;
+            left: 0;
+            opacity: 1;
+            display: block;
+            transition: 1s var(--ag-cube-1);
+            position: relative;
+            content: attr(data-front);
+            transform: translateY(0);
+        }
+    }
+
+    &:hover {
+        background: #000;
+        color: #fff;
+
+        .icon {
+            i {
+                transform: rotate(-90deg);
+            }
+        }
+        .text {
+            &::after {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+            &::before {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+        }
+    }
+
 }
 
+
+
+.fx-pr-btn-1 {
+    display: inline-block;
+    flex: 0 0 auto;
+    font-family: var(--fx-font-pr-1);
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 1;
+    background: var(--fx-clr-pr-1);
+    color: #fff;
+    padding: 19px 27px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all .5s var(--cube-1);
+
+    i {
+        margin-left: 10px;
+    }
+
+
+    &:is(.has-hover-white) {
+        .text {
+            &::after {
+                color: var(--fx-clr-pr-1);
+            }
+            &::before {
+                color: #fff;
+            }
+        }
+        &:hover {
+            background: #fff;
+            color: var(--fx-clr-pr-1);
+        }
+    }
+
+    &:is(.has-hover-border) {
+        border: 2px solid transparent;
+
+        .text {
+            &::after {
+                color: var(--fx-clr-pr-1);
+            }
+        }
+        &:hover {
+            background: transparent;
+            border-color: var(--fx-clr-pr-1);
+        }
+    }
+
+    &:is(.has-white-bg) {
+        background: #fff;
+        border: 2px solid transparent;
+        padding: 17px 27px;
+
+        .text {
+            &::before {
+                color: var(--fx-clr-pr-1);
+            }
+            &::after {
+                color: #fff;
+            }
+        }
+
+        &:hover {
+            background: transparent;
+            border-color: #fff;
+        }
+    }
+
+    &:is(.has-clip) {
+        border-radius: 0;
+        padding: 19px 31px;
+        clip-path: polygon(10% 0, 100% 0, 100% 65%, 90% 100%, 0 100%, 0 0);
+
+        .text {
+            &::after {
+                color: var(--fx-clr-pr-1);
+            }
+        }
+
+        &:hover {
+            background: #fff;
+            clip-path: polygon(10% 0, 100% 0, 100% 65%, 90% 100%, 0 100%, 0 35%);
+        }
+
+        &:is(.has-hover-black) {
+
+            .text {
+                &::after {
+                    color: #fff;
+                }
+
+            }
+            &:hover {
+                background: #000;
+            }
+        }
+    }
+
+    &:is(.has-btn-5) {
+        background: var(--fx-clr-pr-2);
+
+        .text {
+            &::before {
+                color: #000;
+            }
+            &::after {
+                color: #fff;
+            }
+        }
+
+        i {
+            color: #000;
+        }
+
+        &:hover {
+            background: #000;
+
+            i {
+                color: #fff;
+            }
+        }
+
+        &:is(.hover-white) {
+
+            .text {
+                &::after {
+                    color: var(--fx-clr-pr-2);
+                }
+            }
+
+            &:hover {
+                background: #fff;
+
+                i {
+                    color: var(--fx-clr-pr-2);
+                }
+       
+            }
+        }
+    }
+
+    &:is(.has-h6) {
+        background: var(--fx-clr-pr-2);
+
+        .text {
+            &::before {
+                color: #000;
+            }
+        }
+
+        i {
+            color: #000;
+        }
+
+        &:hover {
+            background: #000;
+
+            i {
+                color: #fff;
+            }
+        }
+
+        &:is(.hover-white) {
+
+            .text {
+                &::after {
+                    color: #000;
+                }
+            }
+            &:hover {
+                background: #fff;
+
+                i {
+                    color: #000;
+                }
+            }
+        }
+    }
+}
 /* 
     button-end
 */

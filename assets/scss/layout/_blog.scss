@@ -223,6 +223,9 @@
             font-size: 20px;
             line-height: 140%;
             transition: .5s var(--ag-cube-1);
+            &:hover {
+                transform: translateY(-3px);
+            }
         }
 
         .img-elm {
@@ -240,6 +243,10 @@
 
             @media #{$sm} {
                 height: 415px;
+            }
+
+            img {
+                transform: scale(1.1);
             }
         }
 

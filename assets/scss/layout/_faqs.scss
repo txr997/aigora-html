@@ -83,6 +83,12 @@
             grid-template-columns: 1fr;
         }
     }
+
+    &-sec-title {
+        .ag-sec-title-1 {
+            max-width: 500px;
+        }
+    }
     
     &-booking {
         background-color: #fff;

@@ -614,6 +614,7 @@ if ($(".wa_magnetic_1_trigger").length) {
                 gsap.to(elm, {
                     x: 0,
                     y: 0,
+					scale: 1.05,
                     duration: 1,
                     ease: "ease1"
                 });
@@ -633,6 +634,7 @@ if ($(".wa_magnetic_1_trigger").length) {
             gsap.to(elm, {
                 x: xMove,
                 y: yMove,
+				scale: 1.05,
                 duration: 1,
                 ease: "ease1"
             });
