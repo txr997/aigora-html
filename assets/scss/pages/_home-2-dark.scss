@@ -1,0 +1,259 @@
+/* 
+    home-2-start
+*/
+.ag-home-2 {
+    &:is(.has-dark) {
+        background-color: #0A0A0A;
+
+        .ag-preloader-1 {
+            background-color: #18181B;  
+
+            &-core {
+                &::after {
+                    border-color: #424242;
+                }
+            }
+
+            &-label {
+                color: #bdbdbd;
+            }
+        }
+
+        .ag-sec-title-1 {
+            color: #fff;
+        }
+
+        .ag-p-1 {
+            color: #DFDFDF;
+        }
+
+
+        .ag-about-2 {
+            &-img-2 {
+                border-color: #212121;
+            }
+
+            &-content {
+                .ag-pr-btn-2 {
+                    color: #fff;
+                }
+            }
+
+            &-card-single {
+                background: linear-gradient(180deg, #323232 0%, #010101 100%);
+
+                .icon-elm {
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+                .title {
+                    color: #fff;
+                }
+            }
+        }
+
+        .ag-services-2 {
+            &-sec-title .subtitle-x-btn {
+                border-bottom: 1px solid rgb(203 203 203 / 20%);
+            }
+
+            &-acd-item {
+        
+
+                .item-title {
+                    color: #fff;
+
+                    .tags-list span {
+                        border: 1px solid rgb(234 234 234 / 30%);
+                    }
+
+                    .ag-pr-btn-2 {
+                        .icon {
+                            background-color: #242426;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &:is(.active) {
+                    background-color: #1E1E1F;
+                }
+
+            }
+        }
+
+
+        .ag-partner-2 {
+            &-wrap {
+                .single-logo {
+                    background-color: #1E1E1F;
+
+                    &:is(.has-btn) {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+        .ag-choose-2 {
+            &-item {
+                background: linear-gradient(180deg, #323232 0%, #010101 100%);
+                .number {
+                    color: #fff;
+                }
+            }
+        }
+
+
+        .ag-award-2 {
+            &-item {
+                border: 1px solid #313131;
+
+                .title {
+                    color: #fff;
+                }
+
+                .dot-shape {
+                    background-color: #585859;
+                }
+                .img-elm {
+                    background-color: #343436;
+                    box-shadow: -3px -2px 6px #000000, 3px 6px 12px rgba(0, 0, 0, 0.16), inset 0px 0px 10px rgba(0, 0, 0, 0.32);
+                }
+                &:hover {
+                    background-color: #1E1E1F;
+                }
+            }
+        }
+
+        .ag-testimonial-2-card {
+
+            &:hover {
+                .author-bio {
+                    color: #1F1F1F;
+                }
+            }
+
+        }
+
+
+        .ag-accordion-item {
+            background: #1E1E1F;
+
+            .item-title {
+                color: #fff;
+            }
+
+            .item-disc {
+                border-top: 1px solid #323233;
+            }
+        }
+
+        .ag-faqs-2-booking {
+            background-color: #1E1E1F;
+
+            .title {
+                color: #fff;
+            }
+        }
+
+        .ag-blog-2-item {
+            .content-wrap {
+                background-color: #242426;
+
+                .title {
+                    color: #fff;
+                }
+            }
+
+            &:hover {
+                .content-wrap {
+                    background-color: #fff;
+
+                    .date {
+                        color: var(--ag-clr-p-1);
+                    }
+
+                    .title {
+                        color: var(--ag-clr-h-1);
+                    }
+                }
+            }
+        }
+
+        .ag-contact-2-form {
+            background-color: #1E1E1F;
+
+            .ag-contact-1-form {
+                &-input {
+                    background: #000;
+                    color: rgb(223 223 223 / 40%);
+                }
+
+                .ag-pr-btn-2 {
+                    background: #000;
+                }
+            }
+
+        }
+
+        .ag-footer-2 {
+            &-area {
+                background-color: #1E1E1F;
+            }
+
+            &-top {
+                border-bottom: 1px solid rgb(255 255 255 / 20%);
+
+                .title {
+                    color: #fff;
+                }
+
+                .link-elm {
+                    color: #fff;
+
+                    &::after {
+                        background-color: #ddd;
+                    }
+                }
+            }
+
+            &-disc {
+                color: #fff;
+            }
+
+            &-widget {
+                &-title {
+                    color: #fff;
+
+                    span {
+                        background-color: #DFDFDF;
+                    }
+                }
+
+                ul a {
+                    color: #FFFFFF;
+                    &::after {
+                        background-color: #fff;
+                    }
+                }
+            }
+
+
+            &-copyright {
+                border-top: 1px solid rgb(255 255 255 / 20%);
+
+                .copyright-text {
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+/* 
+    home-2-end
+*/

@@ -37,8 +37,14 @@
         .ag-preloader-1 {
             background-color: #18181B;  
 
-            &-track {
-                background: rgb(240 242 244 / 50%);
+            &-core {
+                &::after {
+                    border-color: #424242;
+                }
+            }
+
+            &-label {
+                color: #bdbdbd;
             }
         }
 
