@@ -101,5 +101,31 @@
     }
 }
 
+/* 
+    step-2-start
+*/
+.ag-step-3 {
+    &-sec-title {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
 
+        .left {
+            max-width: 600px;
+        }
+
+        .right {
+            max-width: 416px;
+        }
+
+        .sec-disc {
+            margin-bottom: 32px;
+        }
+    }
+}
+/* 
+    step-2-end
+*/
 

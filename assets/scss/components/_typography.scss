@@ -44,6 +44,15 @@
         top: 18px;
         left: 12px;
     }
+
+    &:is(.has-v3) {
+        background-color: rgb(36 36 38 / 10%);
+        color: var(--ag-clr-h-1);
+
+        &::after {
+            background-color: var(--ag-clr-h-1);
+        }
+    }
 }
 
 .ag-sec-title-1 {

@@ -21,6 +21,19 @@
     }
 }
 
+.ag-home-3 {
+    background-color: #F5F5F5;
+
+
+    .wa-back-to-top {
+        background-color: var(--ag-clr-h-1);
+
+        &:hover svg * {
+            fill: var(--ag-clr-h-1);
+        }
+    }
+}
+
 
 
 /* 

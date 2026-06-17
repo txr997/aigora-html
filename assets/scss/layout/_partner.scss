@@ -73,3 +73,46 @@
 /* 
     partner-2-end
 */
+/* 
+    partner-3-start
+*/
+.ag-partner-3 {
+    &-area {
+        border-top: 1px solid #E4E4E4;
+        border-bottom: 1px solid #E4E4E4;
+        padding: 20px 0;
+    }
+
+    &-logo {
+        display: flex;
+
+        .single-logo {
+            flex: 0 0 auto;
+            width: 220px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: #fff;
+            border-right: 1px solid #F2F2F2;
+            transition: .5s var(--ag-cube-1);
+
+            img {
+                transition: .5s var(--ag-cube-1); 
+            }
+
+            &:hover {
+                background-color: var(--ag-clr-h-1);
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    }
+}
+
+/* 
+    partner-3-end
+*/

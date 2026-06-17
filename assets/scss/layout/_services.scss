@@ -366,3 +366,188 @@
 /* 
     services-2-end
 */
+
+
+/* 
+    services-3-start
+*/
+.ag-services-3 {
+    &-area {
+        background-color: #000207;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 60px;
+    }
+
+    &-container {
+        @media #{$over} {
+            margin-left: -180px;
+            margin-right: -180px;
+        }
+    }
+    
+    &-sec-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .ag-sec-title-1 {
+            color: #fff;
+            max-width: 660px;
+        }
+
+        .ag-sd-btn-1 {
+            color: #fff;
+
+            span {
+                &::after {
+                    background-color: #fff;
+                }
+            }
+
+        }
+    }
+
+    &-acd {
+        &-item {
+            border-bottom: 1px solid #333333;
+            .item-title {
+                padding: 24px 0px;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 4fr auto;
+                align-items: center;
+                background-color: transparent;
+                text-align: left;
+                gap: 15px;
+                color: #fff;
+
+
+                .number {
+                    color: #808080;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                .title {
+                    font-size: 28px;
+                    color: #808080;
+                    @media #{$xl,$lg,$md,$xs} {
+                        font-size: 22px;
+                    }
+                }
+
+
+                .ag-pr-btn-2 {
+                    background-color: transparent;
+                    font-weight: 400;
+                    opacity: 80%;
+                    .icon {
+                        background-color: #242426;
+                        color: #fff;
+                    }
+
+                    &:hover {
+                        color: #fff;
+                    }
+
+                    @media #{$xs} {
+                        display: none;
+                    }
+
+                }
+
+
+                &:is(:not(.collapsed)) {
+                    .title {
+                        color: #fff;
+                    }
+                    .ag-pr-btn-2 {
+                        opacity: 1;
+                        .icon {
+                            background: var(--ag-clr-gd-3);
+                            color: #fff;
+                        }
+                    }
+    
+                }
+            }
+
+            .inner-content {
+                max-width: 1400px;
+                margin-left: auto;
+                padding-bottom: 24px;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                flex-wrap: wrap;
+
+                .img-elm {
+                    max-width: 220px;
+                    height: 140px;
+                    border-radius: 20px;
+
+                }
+
+                .disc-x-btn {
+                    max-width: 582px;
+                    width: 100%;
+
+                    .disc {
+                        color: #BABABA;
+                        margin-bottom: 16px;
+                    }
+
+                    .ag-sd-btn-1 {
+                        color: #fff;
+                        font-weight: 500;
+            
+                        span {
+                            &::after {
+                                background-color: #fff;
+                            }
+                        }
+            
+                    }
+                }
+
+
+
+                .categories {
+                    &-title {
+                        color: #fff;
+                        font-size: 24px;
+                        font-weight: 400;
+                        margin-bottom: 22px;
+                    }
+
+                    &-list {
+                        display: inline-flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        max-width: 306px;
+                        width: 100%;
+                        .single-item {
+                            text-transform: uppercase;
+                            font-weight: 400;
+                            font-size: 14px;
+                            opacity: 80%;
+                            border: 1px solid #4C4C4C;
+                            border-radius: 100px;
+                            padding: 3px 12px;
+                        }
+                    }
+                }
+
+            }
+            
+
+        }
+    }
+}
+
+/* 
+    services-3-end
+*/
