@@ -487,7 +487,7 @@ if($(".ag-award-2-item").length) {
 	
 }
 
-
+// header-3-sticky
 if($(".ag-header-3-area").length) {
 	const $header = $('.ag-header-3-area');
 	const headerTop = $header.offset().top;
@@ -500,6 +500,93 @@ if($(".ag-header-3-area").length) {
 		}
 	});
 }
+
+// team-3-toggle-btn
+if($(".ag-team-3-member-single").length) {
+	$('.view-btn').on('click', function () {
+		$(this).closest('.ag-team-3-member-single').toggleClass('active');
+	});
+}
+
+
+
+// tools-3-animation
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	const project1tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ag-tools-3-wrap", 
+			start: "top 50%", 
+			toggleActions: "play none none reverse", 
+			markers: false 
+		}
+	});
+	
+
+	project1tl.from(".ag-tools-3-wrap .logo-elm:nth-of-type(2)", { 
+		xPercent: -80,
+		rotate: -25,
+		autoAlpha: 0,
+		duration: .5,
+	})
+
+	project1tl.from(".ag-tools-3-wrap .logo-elm:nth-of-type(6)", { 
+		xPercent: 80,
+		rotate: 25,
+		autoAlpha: 0,
+		duration: .5,
+	},"<")
+
+	project1tl.from(".ag-tools-3-wrap .logo-elm:nth-of-type(5)", { 
+		xPercent: 80,
+		rotate: -25,
+		autoAlpha: 0,
+		duration: .5,
+	},"<")
+
+	project1tl.from(".ag-tools-3-wrap .logo-elm:nth-of-type(3)", { 
+		xPercent: -80,
+		rotate: 25,
+		autoAlpha: 0,
+		duration: .5,
+	},"<")
+	
+	project1tl.from(".ag-tools-3-wrap .logo-elm:nth-of-type(1)", { 
+		xPercent: -80,
+		rotate: 25,
+		autoAlpha: 0,
+		duration: .5,
+	},"<50%")
+	project1tl.from(".ag-tools-3-wrap .logo-elm:nth-of-type(4)", { 
+		xPercent: 80,
+		rotate: 25,
+		autoAlpha: 0,
+		duration: .5,
+	},"<")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
