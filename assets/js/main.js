@@ -565,14 +565,24 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 }
 
 
+// testimonial-3-slider
+var ag_t3_slider = new Swiper(".ag_t3_slider", {
+	loop: true,
+	speed: 800,
+	spaceBetween: 12,
+	slidesPerView: "auto",
+	autoplay: { delay: 5000 },
 
+	navigation: {
+		nextEl: ".ag_t3_slider_next",
+		prevEl: ".ag_t3_slider_prev",
+	},
+	pagination: {
+		el: ".ag_t3_slider_pagination",
+		clickable: true,
+	},
 
-
-
-
-
-
-
+});
 
 
 

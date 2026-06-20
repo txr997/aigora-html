@@ -13,6 +13,24 @@
         }
     }
 
+    &-bg-video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+
+        &::after {
+            content: "";
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            position: absolute;
+            opacity: .7;
+        }
+    }
+
     &-wrap {
         display: flex;
         align-items: center;
@@ -536,4 +554,61 @@
 
 /* 
     contact-2-end
+*/
+
+/* 
+    contact-3-start
+*/
+.ag-contact-1 {
+    &-area {
+        &:is(.has-v3) {
+            .ag-contact-1-bg-video::after {
+                opacity: 0.2;
+            }
+
+            .ag-contact-1 {
+                &-book-card {
+                    .content-wrap {
+                        background: var(--ag-clr-gd-3);
+                    }
+                }
+
+                &-right {
+                    &::before {
+                        background: var(--ag-clr-gd-3);
+                    }
+                    .glow-1 {
+                        background: var(--ag-clr-gd-3);
+                    }
+                    .glow-2 {
+                        background: var(--ag-clr-gd-3);
+                    }
+
+                    &-content {
+                        .ag-subtitle-1 {
+                            background-color: rgb(36 36 38 / 20%);
+                            color: #000;
+                        }
+                    }
+
+
+
+                }
+
+                &-form {
+                    .ag-pr-btn-1 {
+                        background: var(--ag-clr-gd-3);
+                        box-shadow: none;
+                    }
+
+                    .form-checkbox input[type=checkbox] {
+                        border: 1.5px solid #459ED7;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 
+    contact-3-end
 */

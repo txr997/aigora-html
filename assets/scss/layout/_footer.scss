@@ -653,3 +653,63 @@
 /* 
     footer-2-end
 */
+
+/* 
+    footer-3-start
+*/
+.ag-footer-1-area {
+    &:is(.has-footer-3) {
+        .ag-footer-1 {
+            &-social-link {
+                &:hover {
+                    background: var(--ag-clr-gd-3);
+                    border-color: transparent;
+                }
+            }
+
+            &-widget-title span {
+                background: var(--ag-clr-gd-3);
+            }
+
+            &-widget ul a {
+                &::after {
+                    background: var(--ag-clr-gd-3);
+                }
+                &:hover {
+                    color: #2CBDD2;
+                }
+            }
+            
+            &-newsletter {
+                &-input {
+                    &:focus {
+                        border-color: #2CBDD2;
+                    }
+
+
+                }
+
+                &-btn {
+                    .text {
+                        background: var(--ag-clr-gd-3);
+                    }
+                    .icon {
+                        background-color: var(--ag-clr-h-1);
+                    }
+                }
+            }
+
+            
+            &-bottom .copyright a {
+                color: #2CBDD2;
+
+                &:hover {
+                    color: var(--ag-clr-h-1);
+                }
+            }
+        }
+    }
+}
+/* 
+    footer-3-end
+*/
