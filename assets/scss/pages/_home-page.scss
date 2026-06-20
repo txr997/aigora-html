@@ -32,7 +32,14 @@
             fill: var(--ag-clr-h-1);
         }
     }
+
+    @media #{$over,$xxxl,$xxl} {
+        &::-webkit-scrollbar-thumb {
+            background: var(--ag-clr-gd-3);
+        }
+    }
 }
+
 
 
 

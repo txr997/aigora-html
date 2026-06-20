@@ -173,6 +173,10 @@
         .sec-disc {
             margin-bottom: 32px;
         }
+
+        .ag-sd-btn-1 {
+            color: var(--ag-clr-h-1);
+        }
     }
 
 
@@ -232,7 +236,8 @@
                 height: 42px;
                 border: 2px solid var(--ag-clr-h-1);
                 border-radius: 12px;
-
+                animation: h1authorKf 4s linear infinite;
+                
                 &:not(:first-child) {
                     margin-left: -15px;
                 }

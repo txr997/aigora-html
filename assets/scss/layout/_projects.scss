@@ -662,9 +662,13 @@
         .title {
             font-size: 24px;
             margin-bottom: 6px;
-
+            transition: .3s var(--ag-cube-1);
             @media #{$xs} {
                 font-size: 20px;
+            }
+
+            &:hover {
+                color: #6D6BDF;
             }
         }
 

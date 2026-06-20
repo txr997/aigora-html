@@ -359,9 +359,14 @@
         .title {
             font-size: 28px;
             margin-bottom: 35px;
+            transition: .3s var(--ag-cube-1);
 
             @media #{$xl,$lg,$md,$xs} {
                 font-size: 20px;
+            }
+
+            &:hover {
+                color: #6D6BDF;
             }
         }
         .blog-meta {
@@ -412,6 +417,10 @@
                 font-size: 16px;
             }
         }
+
+        .ag-sd-btn-1 {
+            color: var(--ag-clr-h-1);
+        }
     }
     
     &-card-2 {
@@ -438,9 +447,14 @@
         .title {
             font-size: 24px;
             margin-bottom: 48px;
-
+            transition: .3s var(--ag-cube-1);
+            
             @media #{$xl,$lg,$md,$xs} {
                 font-size: 20px;
+            }
+
+            &:hover {
+                color: #6D6BDF;
             }
         }
 

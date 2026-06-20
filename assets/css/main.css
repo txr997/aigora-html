@@ -4186,7 +4186,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
-  opacity: 80%;
+  opacity: 1;
   border: 1px solid #4C4C4C;
   border-radius: 100px;
   padding: 3px 12px;
@@ -5114,11 +5114,15 @@ input:focus::placeholder, textarea:focus::placeholder {
 .ag-projects-3-item .title {
   font-size: 24px;
   margin-bottom: 6px;
+  transition: 0.3s var(--ag-cube-1);
 }
 @media (max-width: 767px) {
   .ag-projects-3-item .title {
     font-size: 20px;
   }
+}
+.ag-projects-3-item .title:hover {
+  color: #6D6BDF;
 }
 .ag-projects-3-item .subtitle {
   font-size: 16px;
@@ -5618,6 +5622,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-left: auto;
   font-size: 24px;
   transition: 0.5s var(--ag-cube-1);
+  cursor: pointer;
 }
 .ag-team-3-member-single .view-btn i {
   transition: 0.5s var(--ag-cube-1);
@@ -5633,6 +5638,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 .ag-team-3-member-single .name {
   font-size: 20px;
   margin-bottom: 6px;
+  transition: 0.3s var(--ag-cube-1);
+}
+.ag-team-3-member-single .name:hover {
+  color: #6D6BDF;
 }
 .ag-team-3-member-single .bio {
   font-size: 16px;
@@ -6987,6 +6996,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .ag-testimonial-3-sec-title .sec-disc {
   margin-bottom: 32px;
 }
+.ag-testimonial-3-sec-title .ag-sd-btn-1 {
+  color: var(--ag-clr-h-1);
+}
 .ag-testimonial-3-wrap {
   display: flex;
   gap: 12px;
@@ -7039,6 +7051,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   height: 42px;
   border: 2px solid var(--ag-clr-h-1);
   border-radius: 12px;
+  animation: h1authorKf 4s linear infinite;
 }
 .ag-testimonial-3-reviews .author-img:not(:first-child) {
   margin-left: -15px;
@@ -7883,11 +7896,15 @@ input:focus::placeholder, textarea:focus::placeholder {
 .ag-blog-3-card .title {
   font-size: 28px;
   margin-bottom: 35px;
+  transition: 0.3s var(--ag-cube-1);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .ag-blog-3-card .title {
     font-size: 20px;
   }
+}
+.ag-blog-3-card .title:hover {
+  color: #6D6BDF;
 }
 .ag-blog-3-card .blog-meta {
   display: flex;
@@ -7930,6 +7947,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .ag-blog-3-card .author-bio {
   font-size: 16px;
 }
+.ag-blog-3-card .ag-sd-btn-1 {
+  color: var(--ag-clr-h-1);
+}
 .ag-blog-3-card-2 {
   background-color: #FFFFFF;
   border-radius: 24px;
@@ -7950,11 +7970,15 @@ input:focus::placeholder, textarea:focus::placeholder {
 .ag-blog-3-card-2 .title {
   font-size: 24px;
   margin-bottom: 48px;
+  transition: 0.3s var(--ag-cube-1);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .ag-blog-3-card-2 .title {
     font-size: 20px;
   }
+}
+.ag-blog-3-card-2 .title:hover {
+  color: #6D6BDF;
 }
 .ag-blog-3-card-2 .meta-x-img {
   display: flex;
@@ -8640,6 +8664,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .ag-home-3 .wa-back-to-top:hover svg * {
   fill: var(--ag-clr-h-1);
+}
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .ag-home-3::-webkit-scrollbar-thumb {
+    background: var(--ag-clr-gd-3);
+  }
 }
 
 /* 

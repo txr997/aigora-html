@@ -125,6 +125,57 @@ function afterPreloader() {
 			});
 		}
 
+		document.querySelectorAll(".wa_title_ani_2").forEach((atEl) => {
+			const atSplit = new SplitText(atEl, {
+				type: "words,chars",
+				wordsClass: "word",
+				charsClass: "char"
+			});
+
+			let atDuration = parseFloat(atEl.getAttribute("data-speed")) || 1;
+			let atDelay = parseFloat(atEl.getAttribute("data-delay")) || 0;
+
+			if (window.innerWidth <= 768) {
+				atDuration = atDuration * 0.3; 
+			}
+
+			gsap.set(atSplit.words, {
+				willChange: "transform",
+				perspective: 1000,
+				transformStyle: "preserve-3d"
+			});
+
+			gsap.set(atSplit.chars, {
+				willChange: "transform",
+				opacity: 0,
+				rotateX: -80,
+				transformOrigin: "center center -10px"
+			});
+
+			gsap.set(atEl, {
+				perspective: 1000,
+				transformStyle: "preserve-3d"
+			});
+
+			gsap.to(atSplit.chars, {
+				scrollTrigger: {
+					trigger: atEl,
+					start: "top 80%",
+				},
+				opacity: 1,
+				rotateX: 0,
+				duration: atDuration,
+				delay: atDelay,
+				ease: "power3.out",
+				stagger: {
+					each: 0.05,
+					from: "center",
+					grid: "auto",
+				},
+			});
+		});
+
+
 
 	}	
 
