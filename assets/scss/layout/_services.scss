@@ -551,3 +551,112 @@
 /* 
     services-3-end
 */
+
+/* 
+    services-4-start
+*/
+.ag-services-4 {
+    &-sec-title {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            max-width: 564px;
+        }
+
+        .right {
+            max-width: 416px;
+        }
+
+        .sec-disc {
+            margin-bottom: 32px;
+        }
+    }
+
+    &-container {
+        @media #{$over} {
+            margin-left: -160px;
+            margin-right: -160px;
+        }
+    }
+
+
+
+    &-wrap {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @media #{$xl} {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media #{$lg,$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    &-card {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 12px;
+
+        .disc {
+            background-color: #F5F5F5;
+            border-radius: 20px;
+            padding: 30px 32px;
+            font-size: 16px;
+
+            @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+                padding: 30px 12px;
+            }
+        }
+
+        .title {
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--ag-clr-pr-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 10px 40px rgba(255, 25, 0, 0.2);
+        }
+
+        .content-wrap {
+            padding: 28px 28px;
+            padding-bottom: 40px;
+
+            @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+                padding: 28px 8px;
+                padding-bottom: 40px;
+            }
+        }
+
+        &:hover {
+            .icon {
+                img,i {
+                    animation: swing 1s;
+                }
+            }
+        }
+    }
+
+
+}
+/* 
+    services-4-end
+*/

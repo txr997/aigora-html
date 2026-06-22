@@ -265,6 +265,15 @@
                     display: inline-flex;
                 }
             }
+
+            .ag-pr-btn-1 {
+                @media #{$xs} {
+                    display: none;
+                }
+                @media #{$sm} {
+                    display: inline-flex;
+                }
+            }
         }
     }
 
